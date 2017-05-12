@@ -33,9 +33,11 @@ docker build -t netcore --no-cache .
 ```
 Create and run container for .NET Core app
 ```
-docker run -d -p 5000:80 -e VIRTUAL_HOST=demo1.localhost --name netcoreserver 
+docker run -d -p 5000:80 -e VIRTUAL_HOST=demo1.localhost --name netcoreserver netcore
 ```
-Go try it out `http://demo1.localhost/`
+This will run a container that listens on port 80 that can be accessed via locahost on port 5000 `http://localhost:5000` the image will be named `netcoreserver`
+
+Go try it out. This is the location when using the nginx proxy esposed url `http://demo1.localhost/`
 
 Other helpful commands
 - Where did things go wrong while deploying a container: `docker logs netcoreserver`
@@ -45,6 +47,7 @@ Other helpful commands
 - Start container: `docker start cocky_borg`
 - Start container: `docker start netcoreserver`
 
-
+Add RavenDB as container
+https://github.com/ravendb/ravendb/blob/d9ff0a195c4cdb23c97439505c7715e1dbda5fbb/docker/run-ubuntu1604.ps1
 
 
