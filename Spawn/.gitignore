@@ -1,0 +1,7 @@
+.fake
+Fake*
+Tools/*
+!Tools/nuget
+Tools/nuget/*
+!Tools/nuget/NuGet.Config.TT
+!Tools/nuget/NuGet.exe

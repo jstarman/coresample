@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  coresample:
+    image: coresample
+    build:
+      context: .
+      dockerfile: Dockerfile
